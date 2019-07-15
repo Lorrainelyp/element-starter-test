@@ -4,6 +4,9 @@
     <div>
       <el-button @click="startHacking">Start</el-button>
     </div>
+    <router-link to="/pages/demo/cropper">Go to cropper</router-link>
+    <router-link to="/pages/demo/draggable">Go to draggable</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
