@@ -20,6 +20,7 @@
             <vueCropper
               ref="cropper"
               :img="option.img"
+              :canScale="option.canScale"
               :outputSize="option.size"
               :outputType="option.outputType"
               :info="true"
@@ -31,6 +32,7 @@
               :autoCropWidth="option.autoCropWidth"
               :autoCropHeight="option.autoCropHeight"
               :fixedBox="option.fixedBox"
+              :centerBox="option.centerBox"
               @realTime="realTime"
               @imgLoad="imgLoad"
             ></vueCropper>
@@ -61,6 +63,7 @@
         previews: {},
         option: {
           img: '',
+          canScale:false,
           outputSize:1, //剪切后的图片质量（0.1-1）
           full: false,//输出原图比例截图 props名full
           outputType: 'png',
@@ -70,7 +73,8 @@
           autoCrop: true, 
           autoCropWidth: 150, 
           autoCropHeight: 150, 
-          fixedBox: true 
+          fixedBox: false,
+          centerBox:true 
         }, 
         fileName:'',  //本机文件地址
         downImg: '#',
