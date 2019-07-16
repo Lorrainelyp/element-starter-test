@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 // 页面
 import Cropper from './pages/demo/Cropper'
 import Draggable from './pages/demo/Draggable'
-// import VueCropper from 'vue-cropper'
+import VueCropper from 'vue-cropper'
 
 const routes = [
   { path: '/pages/demo/Cropper', component: Cropper },
@@ -20,7 +20,7 @@ const router = new VueRouter({
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
-// Vue.use(VueCropper)
+Vue.use(VueCropper)
 
 
 new Vue({
